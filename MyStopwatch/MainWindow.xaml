@@ -1,0 +1,38 @@
+﻿<Window x:Class="MyStopwatch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyStopwatch"
+        mc:Ignorable="d"
+        Title="a simple stopwatch" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="75" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="StopwatchInstructionsTextBlock" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="start to start. stop to stop. reset to reset"/>
+
+        <TextBlock x:Name="CurrentStopwatchTextBlock" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="60" FontWeight="Bold"/>
+
+        <TextBlock Grid.Row="3" Text="Made By Benton Wilson"  Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="#FFADADAD"/>
+        <TextBlock Grid.Row="3" Grid.Column="3" Text="05.14.2024" VerticalAlignment="Bottom"  HorizontalAlignment="Right" FontStyle="Italic" Foreground="#FFADADAD"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" >
+            <Button Name="StartStopwatchButton" Content="Start" Width="40" Click="ClickedOn_StartStopwatchButton" Margin="0,0,10,0"/>
+            <Button Name="StopStopwatchButton" Content="Stop" Width="40" Click="ClickedOn_StopStopwatchButton" Margin="0,0,10,0"/>
+            <Button Name="ResetStopwatchButton" Content="Reset" Width="40" Click="ClickedOn_ResetStopwatchButton"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
